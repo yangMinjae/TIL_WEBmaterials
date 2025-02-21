@@ -95,6 +95,49 @@
       <textarea rows="10" cols="100" placeholder="자기소개" style="resize: none;"></textarea>
       <!-- 태그 사이의 공간으로 문자열이 입력되므로 저기안에 아무것도 넣으면안된다. 사이에 엔터, 공백 금지 -->
       <!-- ui 뭉게질 수 있으니 resize none으로 설정해주기 -->
+
+      <hr>
+      <!-- 7. 목록 상자(선택만 가능) -->
+      <!-- select 태그로 목록을 만들고 option 태그로 값 추가 -->
+
+      <h3>목록 상자</h3>
+      <select name="arr1">
+        <option value="s">서울</option>
+        <option value="g">경기</option>
+        <option value="i">인천</option>
+      </select>
+      <select name="arr2" size="4" multiple>
+        <option value="강남">강남</option>
+        <option value="강동">강동</option>
+        <option value="강북">강북</option>
+        <option value="강서">강서</option>
+      </select>
+
+      <hr>
+      <!-- 8. 콤보 상자 (목록상자+직접입력) -->
+      <h3>콤보상자</h3>
+      <input type="text" list="animals">
+      <datalist id = "animals">
+        <option value="강아지">강아지</option>
+        <option value="고라니">고라니</option>
+        <option value="앵무새">앵무새</option>
+        <option value="랍스터">랍스터</option>
+      </datalist>
+      <br>
+      <!-- 9. 기타 -->
+      <!-- 진행바 : 전체 100중 50 진행 상태 -->
+      50% 진행 : <progress value="50" max="100"></progress>
+      <br>
+      <!-- 색상표 -->
+      색상표 : <input type="color"><br>
+      <!-- 범위바 : 0~100 사이 10 단위로 표시 -->
+      범위 : <input type="range" min="0" max="100" step="10">
+      <br>
+      <!-- 파일 첨부 -->
+      첨부 파일 : <input type="file">
+      <br>
+      <hr>
+
   </form>
 </body>
 </html>
