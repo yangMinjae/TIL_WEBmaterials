@@ -25,7 +25,23 @@
   }
   let kim = new Person('김씨');
   kim.print();
+  /*
+      클래스와 생성자 함수의 차이
+      - 클래스와 일반 함수(생성자) 둘 다 객체를 
+      생성할 수 있고,
+      특정 기능을 가진 메소드를 만들 수도 있지만
+       몇 가지 차이점이 있다.
 
+      1. 클래스 내부 프로퍼티에
+       [[IsclassConstructor]] : true 가 대표적
+          -> 클래스 생성자를 new로 호출하지 
+          않으면 에러가 발생하게 된다.
+      2. **클래스의 메소드는 나열할 수 없다.**
+          -> for-in 문으로 객체를 순회할 때 
+          메소드를 제외하고자 하는 경우가 있다.
+          일반 데이터를 출력하듯 메소드를 
+          출력하면 메소드 코드가 문자열로 출력된다.
+  */  
   class Human{
     constructor(age){
       this._age = age;
@@ -40,10 +56,43 @@
     get name(){
       return this._name.toUpperCase();
     }
-  }
+  };
 
   let lee = new Human();
   lee.name = 'lee';
   console.log(lee.name);
+  console.log(lee._name);
+
+  class Animal{
+    constructor(type, name, sound){
+      this.type = type;
+      this.name = name;
+      this.sound = sound;
+    }
+    say(){
+      console.log(this.sound);
+    }
+  };
+
+  class Dog extends Animal{
+    constructor(name, sound){
+      super('강아지',name, sound);
+    }
+  };
+
+  class Cat extends Animal{
+    constructor(name, sound){
+      super('고양이',name, sound);
+    }
+  };
+
+  const dog = new Dog('멍멍이', '멍멍');
+  const cat = new Cat('야옹이', '야옹');
+
+  console.log(dog);
+  console.log(cat);
+
+  dog.say();
+  cat.say();
 </script>
 </html>
