@@ -29,9 +29,9 @@
   let liElement;
   let liTextNode;
   let ul = document.getElementById('list');
-  for(let i in fruits){
+  for(let i of fruits){
     liElement = document.createElement(`li`);   // 이 안의 값은 실제 태그 이름과 같아야함
-    liTextNode = document.createTextNode(`${fruits[i]}`);
+    liTextNode = document.createTextNode(`${i}`);
     liElement.appendChild(liTextNode);
     ul.appendChild(liElement);
   }
@@ -39,9 +39,9 @@
   // 편법
   let ul1 = document.getElementById('list1');
   let msg = '';
-  fruits.forEach(f =>[
+  fruits.forEach(f =>{
     msg+='<li>'+f+'</li>'
-  ]);
+  });
   ul1.innerHTML = msg;
 </script>
 </html>

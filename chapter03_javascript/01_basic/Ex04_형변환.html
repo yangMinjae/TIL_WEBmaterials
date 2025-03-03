@@ -28,8 +28,10 @@
   let val = '3.14 == 5.81';
   console.log(Number(val));
   // NaN -> Not a Number : 숫자가 아님
+  // Number()는 문자열 전체가 완전한 숫자여야 변환가능하다.
   console.log(parseInt(val));
   console.log(parseFloat(val));
+  // parseInt와 parseFloat은 앞부분만 숫자면 변환가능하다.
   
   console.log("===================")
   val = '원주율 == 3.14';

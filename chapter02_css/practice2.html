@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    *{
+      box-sizing: border-box;
+    }
     body, html{
       margin: 0;
       padding: 0;
@@ -12,11 +15,11 @@
     .cont-1{
       padding: 5px;
       background-color: rgb(192, 190, 190);
-      width: 100vw;
+      width: 100%;
       min-width: 1000px;
     }
     .fl{
-      width: 100vw;
+      width: 100%;
       min-width: 1000px;
       display: flex;
       padding: 5px;
@@ -50,7 +53,7 @@
       align-items: center;
     }
     .top-menu{
-      width: 100vw;
+      width: 100%;
       min-width: 1000px;
       background-color: black;
       padding: 5px;
@@ -68,12 +71,12 @@
     }
     .main{
       display: flex;
-      padding: 30px 10px 10px;
+      padding: 30px 0 10px;
+      box-sizing: border-box;
     }
     .main>div{
-      width: 25vw;
+      width: 25%;
       min-width: 250px;
-      box-sizing: border-box;
     }
     .main>div>img{
       width: 100%; 
@@ -87,7 +90,7 @@
       justify-content: right;
     }
     .footer{
-      width: 100vw;
+      width: 100%;
       min-width: 1000px;
       display: flex;
       align-items: center;
